@@ -10,6 +10,7 @@ Player state calculations are only cancelled if all these conditions are met:
 1. CharacterRagdoll.FixedUpdate - Handles character ragdoll physics calculations, this is the most significant cause of lag during gameplay and seems to hav.
 2. CharacterMovement.FixedUpdate - Handles character movement calculation, mid significance (around 1/4th the strain on the CPU)
 3. Character.FixedUpdate - Seems irrelevant to cancel but it was my first target so I'm leaving it in.
+
 Notably cancelling all these targets seemingly have no influence on gameplay so it may be worth cancelling them entirely but for now I won't go that far.
 # License
 MIT license, feel free to use this project anywhere, all I ask for is you linking to my source code.
